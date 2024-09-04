@@ -1,0 +1,55 @@
+<template>
+    <!-- <lightning-button label="Test" onclick={handleClickTest}></lightning-button> -->
+
+    <h2 class="ra-title">Recommended Articles</h2>
+
+    <template for:each={knowledgeArticles} for:item="knowledgeArticle">
+        <article class="slds-post__payload ka-summary" key={knowledgeArticle.Id}>
+            <a href={knowledgeArticle.urlName} class="slds-media slds-box slds-grow slds-text-link_reset">
+                <div class="slds-media__figure slds-medium-show">
+                    <div class="slds-file slds-size_small">
+                    <figure class="slds-file__crop slds-file__crop_16-by-9">
+                        <lightning-formatted-rich-text value={knowledgeArticle.BannerImage__c}></lightning-formatted-rich-text>
+                    </figure>
+                    </div>
+                </div>
+                <div class="slds-media__body slds-p-vertical_medium ">
+                    <h3 class="slds-text-heading_small ka-title">{knowledgeArticle.Title}</h3>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
+                    <br>
+                    <span class="slds-text-body_small">
+                        <div class="footer">
+                            <span class="view-count">{knowledgeArticle.ArticleTotalViewCount} Views</span>
+                            <span class="dot">•</span>
+                            <span class="date">
+                                <lightning-formatted-date-time value={knowledgeArticle.LastPublishedDate}></lightning-formatted-date-time>
+                            </span>
+                            <span class="dot">•</span>
+                            <span class="article-type">Knowledge</span>
+                        </div>
+                    </span>
+                </div>
+            </a>
+        </article>
+    </template>
+
+    <!-- <template for:each={knowledgeArticles} for:item="knowledgeArticle">
+        <article class="ka-summary" key={knowledgeArticle.Id}>
+            <a href="/CenterHub/s/article/Leveraging-Cloud-Services-for-Scalable-Software-Development" class="ka-title">
+                <h2>
+                    {knowledgeArticle.Title}
+                </h2>
+            </a>
+            <div class="footer">
+                <span class="view-count">{knowledgeArticle.ArticleTotalViewCount} Views</span>
+                <span class="dot">•</span>
+                <span class="date">
+                    <lightning-formatted-date-time value={knowledgeArticle.LastPublishedDate}></lightning-formatted-date-time>
+                </span>
+                <span class="dot">•</span>
+                <span class="article-type">Knowledge</span>
+            </div>
+        </article>
+    </template> -->
+
+</template>

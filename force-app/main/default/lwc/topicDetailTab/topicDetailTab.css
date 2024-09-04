@@ -1,0 +1,46 @@
+.ka-summary{
+    padding: 25px 0;
+    border-bottom: 1px solid var(--lwc-colorBorder, #D4D4D4);
+}
+
+.ra-title{
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.ka-title{
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.ka-title:link { 
+    text-decoration: none; 
+} 
+.ka-title:visited { 
+    text-decoration: none; 
+} 
+.ka-title:hover, .ka-title:hover h2 { 
+    text-decoration: none; 
+    color: #2574A9;
+} 
+.ka-title:active { 
+    text-decoration: none; 
+}
+
+.ka-summary .footer>.dot{
+    margin: 0 7px;
+}
+
+.ka-summary .footer{
+    color: #696969;
+    font-size: 13px;
+}
+
+.slds-file__crop:hover:before{
+    background: none !important;
+}
+
+.slds-file__crop:hover:after{
+    background: none !important;
+}
