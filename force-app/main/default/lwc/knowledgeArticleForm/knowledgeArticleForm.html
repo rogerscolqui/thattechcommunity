@@ -1,0 +1,24 @@
+<template>
+
+    <div>
+        <h2>
+            Create Knowledge Article
+        </h2>
+    
+        <lightning-input label="Title" value={kaTitle} onchange={handleChangeTitle}></lightning-input>
+    
+        <lightning-input label="URL Name" value={kaUrlName} onchange={handleChangeUrlName}></lightning-input>
+    
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="textarea-id-01">Banner Image</label>
+            <lightning-input-rich-text
+                value={kaBannerImage}
+                onchange={handleChangeBannerImage}
+                formats={allowedFormats}>
+            </lightning-input-rich-text>
+          </div>
+    
+        <lightning-button label="Create Article" onclick={handleCreateArticle}></lightning-button>
+        <!-- <lightning-button label="Test" onclick={handleClickTest}></lightning-button> -->
+    </div>
+</template>

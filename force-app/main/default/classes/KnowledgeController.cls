@@ -27,4 +27,11 @@ public without sharing class KnowledgeController {
 
         return kavRecords;
     }
+
+    @AuraEnabled(cacheable=false)
+    public static Knowledge__kav createKnowledgeArticle(String title, String urlName, String bannerImage){
+        Knowledge__kav newKa = KnowledgeManagement.createNewArticleAsADraft(title, urlName, bannerImage);
+        return newKa;
+        // return null;
+    }
 }
