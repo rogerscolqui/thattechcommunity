@@ -1,0 +1,18 @@
+<template>
+    <div class="knowledge-detail slds-p-horizontal_medium">
+        <h2>{knowledgeRecord.Title}</h2>
+        <div class="publish-date slds-p-vertical_medium">
+            <span class="slds-p-right_x-small">
+                <lightning-icon icon-name="utility:clock" alternative-text="date" title="published date" size="x-small"></lightning-icon>
+            </span>
+            <span class="date">
+                <lightning-formatted-date-time value={knowledgeRecord.LastPublishedDate}></lightning-formatted-date-time>
+            </span>
+            <span class="dot slds-p-horizontal_xx-small"> • </span>
+            <span class="article-type">Knowledge</span>
+        </div>
+        <p class="slds-p-bottom_medium">{knowledgeRecord.Text__c}</p>
+
+        <lightning-formatted-rich-text value={knowledgeRecord.BannerImage__c}></lightning-formatted-rich-text>
+    </div>
+</template>

@@ -1,0 +1,8 @@
+.article-form h2{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.article-form .slds-form-element{
+    padding: 0 0 .4rem 0;
+}

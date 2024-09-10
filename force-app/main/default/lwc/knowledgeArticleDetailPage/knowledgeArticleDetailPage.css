@@ -1,0 +1,13 @@
+.knowledge-detail h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.knowledge-detail p{
+    font-size: 16px;
+}
+
+.knowledge-detail .publish-date{
+    color: var(--lwc-colorTextWeak, #696969);
+    font-size: var(--lwc-ssFontSizeSmall, 0.75rem);
+}

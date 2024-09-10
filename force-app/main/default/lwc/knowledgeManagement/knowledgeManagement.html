@@ -1,0 +1,23 @@
+<template>
+
+    <template if:true={isLoading}>
+        <div style="width:100%; height:100%">
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </div>
+    </template>
+
+    <div class="my-articles">
+        <h2>My Knowledge</h2>
+
+        <lightning-datatable 
+            key-field="Id"
+            data={kaRecords}
+            columns={kaColumns}
+            onrowaction={handleRowActionKa}
+            hide-checkbox-column
+        >
+        </lightning-datatable>
+    </div>
+
+    <c-knowledge-modal-update knowledge-detail={selectedKaDetail} onmodalstatus={handleUpdateModalStatus}></c-knowledge-modal-update>
+</template>
